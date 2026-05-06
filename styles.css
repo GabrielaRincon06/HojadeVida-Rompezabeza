@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #b658bb5e;
+    padding: 40px;
+    align-items: center;
+}
+.contenedor2 {
+    display: flex;
+    flex-wrap: wrap;              /* Permite que se acomoden como piezas */
+    justify-content: center;      /* Centra horizontal */
+    align-content: center;        /* Centra vertical en varias filas */
+    gap: 10px;
+    height: 100vh;
+    padding: 20px;
+    color: rgb(3, 68, 68);
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;              /* Permite que se acomoden como piezas */
+    justify-content: center;      /* Centra horizontal */
+    align-content: center;        /* Centra vertical en varias filas */
+    gap: 10px;
+    height: 100vh;
+    padding: 20px;
+    color: rgb(3, 68, 68);
+}
+
+.pieza {
+    background: white;
+    border: 2px solid #333;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      /* Centra contenido dentro */
+    align-items: center;
+
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Efecto tipo rompecabezas */
+.pieza:hover {
+    transform: scale(1.1);
+    background: #e3f2fd;
+}
+
+/* Desorden inicial (simula puzzle) */
+.pieza:nth-child(1) { order: 3; }
+.pieza:nth-child(2) { order: 1; }
+.pieza:nth-child(3) { order: 5; }
+.pieza:nth-child(4) { order: 2; }
+.pieza:nth-child(5) { order: 6; }
+.pieza:nth-child(6) { order: 4; }
